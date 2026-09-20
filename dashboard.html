@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SecureAuth - Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">🔐 SecureAuth</div>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="admin.html">Admin</a>
+        <button onclick="logout()" class="logout-btn">
+            Logout
+        </button>
+    </nav>
+
+</header>
+
+
+<main class="dashboard">
+
+    <div class="welcome">
+        <h1>Welcome, <span id="userName">User</span> 👋</h1>
+
+        <p>
+            Manage your profile and view your account activity.
+        </p>
+    </div>
+
+
+    <!-- User Profile -->
+
+    <section class="dashboard-grid">
+
+        <div class="dashboard-card">
+
+            <h2>👤 My Profile</h2>
+
+            <div class="profile-info">
+
+                <p>
+                    <strong>Name:</strong>
+                    <span id="profileName">-</span>
+                </p>
+
+                <p>
+                    <strong>Email:</strong>
+                    <span id="profileEmail">-</span>
+                </p>
+
+                <p>
+                    <strong>Role:</strong>
+                    <span id="profileRole">User</span>
+                </p>
+
+                <p>
+                    <strong>Status:</strong>
+                    <span class="status">Active</span>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Activity -->
+
+        <div class="dashboard-card">
+
+            <h2>📊 Recent Activity</h2>
+
+            <ul class="activity-list">
+
+                <li>
+                    <span>🔐</span>
+                    Successfully logged in
+                </li>
+
+                <li>
+                    <span>👤</span>
+                    Profile accessed
+                </li>
+
+                <li>
+                    <span>🛡️</span>
+                    Security check completed
+                </li>
+
+                <li>
+                    <span>✅</span>
+                    Account is active
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- Security -->
+
+    <section class="security-card">
+
+        <h2>🛡️ Security Status</h2>
+
+        <div class="security-items">
+
+            <div>
+                <span>✓</span>
+                Password Protected
+            </div>
+
+            <div>
+                <span>✓</span>
+                Authentication Enabled
+            </div>
+
+            <div>
+                <span>✓</span>
+                Protected Dashboard
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <p>© 2026 SecureAuth | Web Development Internship</p>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

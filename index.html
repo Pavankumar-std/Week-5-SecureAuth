@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureAuth - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="auth-container">
+
+    <div class="auth-card">
+
+        <div class="logo">🔐 SecureAuth</div>
+
+        <h1 id="formTitle">Welcome Back</h1>
+        <p class="subtitle" id="formSubtitle">
+            Login to access your dashboard
+        </p>
+
+        <!-- Signup Name -->
+        <div id="nameGroup" class="form-group hidden">
+            <label>Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Enter your email">
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Enter password">
+        </div>
+
+        <button class="primary-btn" onclick="submitAuth()">
+            <span id="submitText">Login</span>
+        </button>
+
+        <p id="message"></p>
+
+        <div class="switch">
+            <span id="switchText">Don't have an account?</span>
+            <button onclick="toggleForm()" id="switchBtn">
+                Sign Up
+            </button>
+        </div>
+
+        <div class="security-info">
+            🛡️ Secure Authentication System
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

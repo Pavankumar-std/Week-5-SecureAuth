@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SecureAuth - Admin Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">🔐 SecureAuth</div>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="admin.html">Admin Panel</a>
+
+        <button onclick="logout()" class="logout-btn">
+            Logout
+        </button>
+    </nav>
+
+</header>
+
+
+<main class="dashboard">
+
+    <div class="welcome">
+
+        <h1>Admin Dashboard 🛠️</h1>
+
+        <p>
+            Manage registered users and monitor system activity.
+        </p>
+
+    </div>
+
+
+    <!-- Analytics -->
+
+    <section class="stats-grid">
+
+        <div class="stat-card">
+            <h3>Total Users</h3>
+            <p id="totalUsers">4</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Active Users</h3>
+            <p id="activeUsers">3</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Admin Accounts</h3>
+            <p id="adminUsers">1</p>
+        </div>
+
+    </section>
+
+
+    <!-- Search -->
+
+    <section class="user-management">
+
+        <div class="section-header">
+
+            <h2>👥 User Management</h2>
+
+            <input
+                type="text"
+                id="userSearch"
+                placeholder="Search users..."
+                onkeyup="searchUsers()"
+            >
+
+        </div>
+
+
+        <!-- Users Table -->
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="usersTable">
+
+                    <tr>
+                        <td>Pavan Kumar</td>
+                        <td>pavan@example.com</td>
+                        <td>
+                            <span class="role admin-role">
+                                Admin
+                            </span>
+                        </td>
+                        <td>
+                            <span class="status">
+                                Active
+                            </span>
+                        </td>
+                        <td>
+                            <button
+                                class="delete-btn"
+                                onclick="deleteUser(this)">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Rahul Sharma</td>
+                        <td>rahul@example.com</td>
+                        <td>
+                            <span class="role">
+                                User
+                            </span>
+                        </td>
+                        <td>
+                            <span class="status">
+                                Active
+                            </span>
+                        </td>
+                        <td>
+                            <button
+                                class="delete-btn"
+                                onclick="deleteUser(this)">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Anjali Reddy</td>
+                        <td>anjali@example.com</td>
+                        <td>
+                            <span class="role">
+                                User
+                            </span>
+                        </td>
+                        <td>
+                            <span class="status">
+                                Active
+                            </span>
+                        </td>
+                        <td>
+                            <button
+                                class="delete-btn"
+                                onclick="deleteUser(this)">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Arjun Kumar</td>
+                        <td>arjun@example.com</td>
+                        <td>
+                            <span class="role">
+                                User
+                            </span>
+                        </td>
+                        <td>
+                            <span class="status">
+                                Active
+                            </span>
+                        </td>
+                        <td>
+                            <button
+                                class="delete-btn"
+                                onclick="deleteUser(this)">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- Security Information -->
+
+    <section class="security-card">
+
+        <h2>🛡️ Security Features</h2>
+
+        <div class="security-items">
+
+            <div>
+                <span>✓</span>
+                Input Validation
+            </div>
+
+            <div>
+                <span>✓</span>
+                Protected Dashboard
+            </div>
+
+            <div>
+                <span>✓</span>
+                Role-Based Access
+            </div>
+
+            <div>
+                <span>✓</span>
+                Password Protection
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 SecureAuth | Admin Dashboard
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
